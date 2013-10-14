@@ -23,6 +23,7 @@
 		71BC5E7517E17BCD00903784 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BC5E5017E17BCC00903784 /* Foundation.framework */; };
 		71BC5E7D17E17BCD00903784 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BC5E7B17E17BCD00903784 /* InfoPlist.strings */; };
 		71BC5E8017E17BCD00903784 /* CalculatoraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BC5E7F17E17BCD00903784 /* CalculatoraTests.m */; };
+		71BC5E8B17E17BFD00903784 /* CalculatoraBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BC5E8A17E17BFD00903784 /* CalculatoraBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		71BC5E7C17E17BCD00903784 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71BC5E7E17E17BCD00903784 /* CalculatoraTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatoraTests.h; sourceTree = "<group>"; };
 		71BC5E7F17E17BCD00903784 /* CalculatoraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatoraTests.m; sourceTree = "<group>"; };
+		71BC5E8917E17BFD00903784 /* CalculatoraBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatoraBrain.h; sourceTree = SOURCE_ROOT; };
+		71BC5E8A17E17BFD00903784 /* CalculatoraBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatoraBrain.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		71BC5E5417E17BCC00903784 /* Calculatora */ = {
 			isa = PBXGroup;
 			children = (
+				71BC5E8917E17BFD00903784 /* CalculatoraBrain.h */,
+				71BC5E8A17E17BFD00903784 /* CalculatoraBrain.m */,
 				71BC5E5D17E17BCC00903784 /* AppDelegate.h */,
 				71BC5E5E17E17BCC00903784 /* AppDelegate.m */,
 				71BC5E6617E17BCC00903784 /* ViewController.h */,
@@ -273,6 +278,7 @@
 				71BC5E5B17E17BCC00903784 /* main.m in Sources */,
 				71BC5E5F17E17BCC00903784 /* AppDelegate.m in Sources */,
 				71BC5E6817E17BCC00903784 /* ViewController.m in Sources */,
+				71BC5E8B17E17BFD00903784 /* CalculatoraBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,17 +13,40 @@
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (CalculatoraBrain *) brain {
+    if (brain) {
+        // do nothing
+    } else {
+        brain = [[CalculatoraBrain alloc] init];
+    }
+    return brain;
+}
+                 
+                 
+- (IBAction)digitPressed:(UIButton *)sender {
+    NSString *digit = [[sender titleLabel] text];
+    if (userIsInTheMiddleOfTypingNumber) {
+        [display setText:[[display text] stringByAppendingString:digit]];
+    } else {
+     // [display setText:digit]; // Same thing below line of code
+        display.text= digit;
+        userIsInTheMiddleOfTypingNumber = YES;
+    }
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)operatorPressed:(UIButton *)sender {
+
+    if (userIsInTheMiddleOfTypingNumber) {
+        [[self brain] setOperand:[[display text] doubleValue] ];
+        userIsInTheMiddleOfTypingNumber = NO;
+    }
+    NSString *operation = [[sender titleLabel] text];
+    double result = [[self brain] performOperation:operation];
+    [display setText:[NSString stringWithFormat:@"%g", result]];
+    
+    
+    
 }
 
 @end
