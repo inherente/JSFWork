@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+    <link rel="STYLESHEET" type="text/css" href="codebase/dhtmlxgrid.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Place Title Here</title>
+    <script src="codebase/dhtmlxcommon.js"></script>
+    <script src="codebase/dhtmlxgrid.js"></script>
+    <script src="codebase/dhtmlxgridcell.js"></script>
+    <!-- script src="codebase/dhtmlxgridext.js" -->
+    <script>
+        var theGrid;
+        function doInitGrid() {
+
+        	theGrid = new dhtmlXGridObject('#{controlla.reportHeader.gridObjectName}');
+        	theGrid.setImagePath("codebase/imgs/");
+        	theGrid.setSkin("#{controlla.reportHeader.skin}");
+
+        	theGrid.init();
+        	theGrid.clearAll();// theGrid.parse(document.getElementById('#{controlla.reportHeader.displayName}').value, loadDone);
+        	alert(document.getElementById("#{controlla.reportHeader.displayName}").value);
+        	theGrid.loadXMLString(document.getElementById("#{controlla.reportHeader.displayName}").value);
+
+        }
+        function loadDone () {
+        	alert('done');
+        }
+    </script>
+
+</head>
+<body onload="doInitGrid()">
+    <h1>H1</h1>
+    <h:form id="forma">
+        <div id="#{controlla.reportHeader.gridObjectName}"></div>
+        <hr/>
+        <h:outputText value="H2O"/>
+        <br/>
+        <h:outputText value="#{localResource.principalTitle}"></h:outputText>
+
+        <textarea id="#{controlla.reportHeader.displayName}" style="display:none;">
+        <h:outputText value="#{localResource.xmlHeader}" escape="false"></h:outputText>
+        <rows>
+        <head>
+        <ui:repeat value="#{controlla.columnReport}" var="columnHeader" varStatus="var" escape="false">
+            <h:outputText value="#{columnHeader}" escape="false"></h:outputText>
+        </ui:repeat>
+        </head>
+        <ui:repeat value="#{controlla.gottenDocuments}" var="product" varStatus="var" escape="false">
+            <h:outputText value="#{product}" escape="false"></h:outputText>
+        </ui:repeat>
+        </rows>
+        </textarea>
+        <!-- a href="javascript:void(0)" onClick="theGrid.clearAll();theGrid.parse(document.getElementById('#{controlla.reportHeader.gridObjectName}').value);" -->
+    </h:form>
+</body>
+</html>

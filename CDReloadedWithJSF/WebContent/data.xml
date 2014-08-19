@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+<head>
+    <column width="*" type="dyn" align="right"  sort="str">Sales</column>
+    <column width="150" type="ed" align="left"  sort="str">Book Title</column>
+    <column width="100" type="ed" align="left"  sort="str">Author</column>
+    <column width="80" type="price" align="right" sort="str">Price</column>
+    <column width="80" type="ch" align="center" sort="str">In Store</column>
+    <column width="80" type="co" align="left" sort="str">Shipping</column>
+    <column width="80" type="ra" align="center" sort="str">Bestseller</column>
+    <column width="200" type="ro" align="center" sort="str">Date of Publication</column>
+    <settings>
+        <colwidth>px</colwidth>
+    </settings>
+</head>
+ <row id="1">
+    <cell>-1500</cell>
+    <cell>A Time to Kill</cell>
+    <cell>John Grisham</cell>
+    <cell>12.99</cell>
+    <cell>1</cell>
+    <cell>24</cell>
+    <cell>0</cell>
+    <cell>05/01/1998</cell>
+</row>
+<row id="2">
+    <cell>1000</cell>
+    <cell>Blood and Smoke</cell>
+    <cell>Stephen King</cell>
+    <cell>0</cell>
+    <cell>1</cell>
+    <cell>24</cell>
+    <cell>0</cell>
+    <cell>01/01/2000</cell>
+</row>
+</rows>
